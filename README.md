@@ -29,7 +29,7 @@ Any orientation costs the same. Failed generations are refunded.
 | `generate_anime_video` | One anime clip (MP4, 5 to 15 seconds, with sound) from a text prompt, optionally starting or ending on an image. | $0.016/s (480p), $0.04/s (768p) |
 | `get_anime_video` | Checks a video that is still rendering. | Free |
 
-`generate_anime_image` arguments: `prompt` (required, up to 1,000 characters, plain English), `model` (`anime` \| `ultra` \| `ultra-max`, default `anime`), `orientation` (`portrait` \| `square` \| `landscape`, default `portrait`), `enhance` (default `true`: rewrites plain English into tags for the anime model), `allowNSFW` (default `false` on this server).
+`generate_anime_image` arguments: `prompt` (required, up to 1,000 characters, plain English), `model` (`anime` \| `ultra` \| `ultra-max`, default `anime`), `orientation` (`portrait` \| `square` \| `landscape`, default `portrait`) and `enhance` (default `true`: rewrites plain English into tags for the anime model).
 
 ## Install
 
@@ -186,7 +186,7 @@ The agent calls `generate_anime_image` and gets back the image URL, the cost ($0
 - Every image and video is charged to the connected account's balance. The server tells agents to make one image and ask before making many, and to quote the price before long videos; it cannot enforce that, so watch your usage page.
 - Signing in with OAuth creates a key named `MCP · <app name>` in Dashboard → API keys. Revoke it there to disconnect that app.
 - Image URLs are on `animeapi.ai/cdn/...` and are not permanent storage. Download images you want to keep.
-- Mature output is off by default on this server (`allowNSFW: false`); an agent can turn it on per call when the user asks.
+- AnimeAPI does not generate adult content. Explicit prompts are refused and not charged.
 
 ## This repository
 

@@ -42,7 +42,7 @@ def generate_anime_image(
     response = requests.post(
         "https://animeapi.ai/api/generate",
         headers={"Authorization": f"Bearer {os.environ['ANIMEAPI_KEY']}"},
-        json={"prompt": prompt[:1000], "model": model, "orientation": orientation, "allowNSFW": False},
+        json={"prompt": prompt[:1000], "model": model, "orientation": orientation},
         timeout=120,
     )
     data = response.json()
