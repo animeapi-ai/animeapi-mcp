@@ -169,6 +169,10 @@ ChatGPT registers itself, sends you to the AnimeAPI consent page and receives a 
 
 Any client that speaks streamable HTTP works: give it the URL, and either let it run OAuth (the server supports discovery, dynamic client registration and PKCE) or set the `Authorization: Bearer ank_your_key` header. Clients that only speak stdio can bridge with `npx mcp-remote https://animeapi.ai/mcp --header "Authorization: Bearer ank_your_key"`.
 
+### LangChain
+
+Use [`langchain-mcp-adapters`](https://github.com/langchain-ai/langchain-mcp-adapters) with transport `streamable_http`, URL `https://animeapi.ai/mcp` and the header `Authorization: Bearer ank_your_key`. Or skip MCP and use the plain tool in [`examples/langchain_tool.py`](examples/langchain_tool.py).
+
 ## Try it
 
 Ask your agent:
