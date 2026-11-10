@@ -112,18 +112,21 @@ VS Code signs you in on first use. With a key instead:
 
 ### Windsurf
 
-`~/.codeium/windsurf/mcp_config.json`:
+Open the MCP servers panel in Cascade's settings and add a server, or edit the MCP config file directly:
 
 ```json
 {
   "mcpServers": {
     "animeapi": {
-      "serverUrl": "https://animeapi.ai/mcp",
+      "url": "https://animeapi.ai/mcp",
+      "transport": "http",
       "headers": { "Authorization": "Bearer ank_your_key" }
     }
   }
 }
 ```
+
+Leave out `headers` to sign in with OAuth instead. Older Windsurf builds keep this file at `~/.codeium/windsurf/mcp_config.json` and name the address `serverUrl` instead of `url`.
 
 ### Cline
 
@@ -155,7 +158,12 @@ Export `ANIMEAPI_KEY=ank_your_key` in the shell you start Codex from. Or sign in
 
 ### ChatGPT (developer mode)
 
-Settings → Apps & Connectors → Advanced → turn on **Developer mode** → **Create** → URL `https://animeapi.ai/mcp`, authentication **OAuth**. ChatGPT registers itself, sends you to the AnimeAPI consent page and receives a key for your account.
+Turn on **Developer mode** in ChatGPT's settings (paid plans; the exact menu has moved between releases), then create a new app (custom connector) with:
+
+- **MCP server URL:** `https://animeapi.ai/mcp`
+- **Authentication:** OAuth
+
+ChatGPT registers itself, sends you to the AnimeAPI consent page and receives a key for your account. Enable the app in a chat from the tools menu.
 
 ### Anything else
 
