@@ -1,0 +1,22 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "ai.animeapi/mcp",
+  "title": "AnimeAPI",
+  "description": "Anime image and video generation from $0.003 per image. Pay as you go, no subscription.",
+  "version": "1.0.0",
+  "websiteUrl": "https://animeapi.ai/docs/mcp",
+  "repository": {
+    "url": "https://github.com/animeapi-ai/animeapi-mcp",
+    "source": "github"
+  },
+  "icons": [
+    { "src": "https://animeapi.ai/apple-touch-icon.png", "mimeType": "image/png", "sizes": ["180x180"] },
+    { "src": "https://animeapi.ai/icon.svg", "mimeType": "image/svg+xml", "sizes": ["any"] }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://animeapi.ai/mcp"
+    }
+  ]
+}
