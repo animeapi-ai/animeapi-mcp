@@ -185,7 +185,7 @@ The agent calls `generate_anime_image` and gets back the image URL, the cost ($0
 
 - Every image and video is charged to the connected account's balance. The server tells agents to make one image and ask before making many, and to quote the price before long videos; it cannot enforce that, so watch your usage page.
 - Signing in with OAuth creates a key named `MCP · <app name>` in Dashboard → API keys. Revoke it there to disconnect that app.
-- Image URLs are on `animeapi.ai/cdn/...` and are not permanent storage. Download images you want to keep.
+- Image URLs are on `animeapi.ai/i/...` and are not permanent storage. Download images you want to keep.
 - AnimeAPI does not generate adult content. Explicit prompts are refused and not charged.
 
 ## This repository
